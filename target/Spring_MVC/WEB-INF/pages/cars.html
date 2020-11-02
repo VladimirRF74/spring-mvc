@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <th>MODEL</th>
+            <th>YEAR</th>
+            <th>PRICE</th>
+        </tr>
+        <tr th:each="msg : ${showList}" >
+            <td th:text="${msg.getModel()}" >
+            <td th:text="${msg.getYear()}" >
+            <td th:text="${msg.getPrice()}"></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
